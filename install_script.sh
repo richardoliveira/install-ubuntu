@@ -26,6 +26,8 @@ echo -e "\e[93mPasso 5: Instalando Oh My Zsh...\e[0m"
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 ZSH=$HOME/.oh-my-zsh RUNZSH=no sh install.sh
 
+rm -rf install.sh
+
 zsh -c "
 # Clonagem de plugins do Zsh
 echo -e '\e[93mPasso 6: Clonando plugins do Zsh...\e[0m'
