@@ -40,14 +40,11 @@ nvm install --lts
 
 # Instalação do PNPM e configurações
 echo -e "\e[93mPasso 9: Instalando PNPM e configurando...\e[0m"
-npm install -g pnpm@latest
-zsh -c "source ~/.zshrc"
-pnpm setup
-zsh -c "source ~/.zshrc"
+zsh -c "npm install -g pnpm@latest; source ~/.zshrc; pnpm setup; source ~/.zshrc"
 
 # Instalação do NestJS e TypeScript
 echo -e "\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m"
-pnpm install -g turbo @nestjs/cli typescript
+zsh -c "pnpm install -g turbo @nestjs/cli typescript"
 
 # Configuração do Docker
 echo -e "\e[93mPasso 11: Configurando Docker...\e[0m"
