@@ -78,5 +78,5 @@ if [ "$parametro" = "true" ]; then
     code ~/.zshrc
 fi
 
-echo -e "\e[93mScript concluído!\e[0m"
-exec zsh -l
+echo -e "\e[93mScript concluído! Feche e abra o seu terminal\e[0m"
+exit
