@@ -21,7 +21,7 @@ git config --global credential.helper store
 
 # Instalação do Oh My Zsh
 echo -e "\e[93mPasso 5: Instalando Oh My Zsh...\e[0m"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/richardoliveira/script-shell/master/install_shell.sh)"
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/richardoliveira/script-shell/master/install_shell.sh)"
 
 # Clonagem de plugins do Zsh
 echo -e "\e[93mPasso 6: Clonando plugins do Zsh...\e[0m"
