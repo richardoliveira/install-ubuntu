@@ -21,7 +21,7 @@ git config --global credential.helper store
 
 # Instalação do Oh My Zsh
 echo -e "\e[93mPasso 5: Instalando Oh My Zsh...\e[0m"
-ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/richardoliveira/script-shell/master/install_shell.sh)"
 
 # Clonagem de plugins do Zsh
 echo -e "\e[93mPasso 6: Clonando plugins do Zsh...\e[0m"
@@ -40,10 +40,8 @@ nvm install --lts
 
 # Instalação do PNPM e configurações
 echo -e "\e[93mPasso 9: Instalando PNPM e configurando...\e[0m"
-npm install -g pnpm@latest
-zsh -c "source ~/.zshrc"
-pnpm setup
-zsh -c "source ~/.zshrc"
+npm install -g pnpm@latest && source ~/.zshrc
+pnpm setup && source ~/.zshrc
 
 # Instalação do NestJS e TypeScript
 echo -e "\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m"
@@ -78,7 +76,7 @@ if [ "$parametro" = "true" ]; then
     echo "aws_access_key_id=SEU_ACCESS_KEY" >> ~/.aws/credentials
     echo "aws_secret_access_key=SEU_SECRET_KEY" >> ~/.aws/credentials
     echo "aws_session_token=SEU_SESSION_TOKEN" >> ~/.aws/credentials
-    zsh -c "code ~/.zshrc"
+    code ~/.zshrc
 fi
 
 echo -e "\e[93mScript concluído!\e[0m"
