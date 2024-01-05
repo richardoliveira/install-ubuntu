@@ -21,7 +21,7 @@ git config --global credential.helper store
 
 # Instalação do Oh My Zsh
 echo -e "\e[93mPasso 5: Instalando Oh My Zsh...\e[0m"
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/richardoliveira/script-shell/master/install_shell.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/richardoliveira/script-shell/master/install_shell.sh)"
 
 zsh -c "
 # Clonagem de plugins do Zsh
@@ -36,14 +36,12 @@ curl -L https://raw.githubusercontent.com/richardoliveira/zshrc/master/.zshrc -o
 # Instalação do NVM
 echo -e '\e[93mPasso 8: Instalando NVM...\e[0m'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR=\"\$HOME/.nvm\" && [ -s \"\$NVM_DIR/nvm.sh\" ] && . \"\$NVM_DIR/nvm.sh\" && [ -s \"\$NVM_DIR/bash_completion\" ] && . \"\$NVM_DIR/bash_completion\"
+source ~/.zshrc
 nvm install --lts
 
 # Instalação do PNPM e configurações
 echo -e '\e[93mPasso 9: Instalando PNPM e configurando...\e[0m'
 npm install -g pnpm@latest
-source ~/.zshrc
-pnpm setup;
 source ~/.zshrc
 
 # Instalação do NestJS e TypeScript
