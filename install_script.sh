@@ -40,8 +40,10 @@ nvm install --lts
 
 # Instalação do PNPM e configurações
 echo -e "\e[93mPasso 9: Instalando PNPM e configurando...\e[0m"
-npm install -g pnpm@latest && source ~/.zshrc
-pnpm setup && source ~/.zshrc
+npm install -g pnpm@latest
+zsh -c "source ~/.zshrc"
+pnpm setup
+zsh -c "source ~/.zshrc"
 
 # Instalação do NestJS e TypeScript
 echo -e "\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m"
@@ -80,3 +82,4 @@ if [ "$parametro" = "true" ]; then
 fi
 
 echo -e "\e[93mScript concluído!\e[0m"
+exec zsh -l
