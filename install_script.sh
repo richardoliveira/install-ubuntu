@@ -83,5 +83,5 @@ if [ '$parametro' = 'true' ]; then
 fi
 
 echo -e '\e[93mScript concluído! Feche e abra o seu terminal\e[0m'
-exit
 "
+exec zsh
