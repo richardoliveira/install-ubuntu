@@ -36,8 +36,7 @@ curl -L https://raw.githubusercontent.com/richardoliveira/zshrc/master/.zshrc -o
 # Instalação do NVM
 echo -e '\e[93mPasso 8: Instalando NVM...\e[0m'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR='$HOME/.nvm' && [ -s '$NVM_DIR/nvm.sh' ] && . '$NVM_DIR/nvm.sh' && [ -s '$NVM_DIR/bash_completion' ] && . '$NVM_DIR/bash_completion'
-source ~/.zshrc
+export NVM_DIR=\"\$HOME/.nvm\" && [ -s \"\$NVM_DIR/nvm.sh\" ] && . \"\$NVM_DIR/nvm.sh\" && [ -s \"\$NVM_DIR/bash_completion\" ] && . \"\$NVM_DIR/bash_completion\"
 nvm install --lts
 
 # Instalação do PNPM e configurações
@@ -55,20 +54,20 @@ pnpm install -g turbo @nestjs/cli typescript
 echo -e '\e[93mPasso 11: Configurando Docker...\e[0m'
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable' | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo usermod -aG docker $USER
+sudo apt-get update && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo usermod -aG docker \$USER
 echo -e '[boot]\ncommand = service docker start' | sudo tee /etc/wsl.conf > /dev/null
 
 # Criação do diretório 'sources'
 echo -e '\e[93mPasso 12: Criando diretório \"sources\"...\e[0m'
 mkdir sources
 
-if [ -z '$1' ]; then
+if [ -z \"\$1\" ]; then
     parametro='false'
 else
-    parametro='$1'
+    parametro=\"\$1\"
 fi
 
-if [ '$parametro' = 'true' ]; then
+if [ \"\$parametro\" = 'true' ]; then
     # Instalação do AWS CLI e configuração
     echo -e '\e[93mPasso 13: Instalando AWS CLI e configurando...\e[0m'
     sudo apt install python3-pip
@@ -85,4 +84,4 @@ fi
 
 echo -e '\e[93mScript concluído! Feche e abra o seu terminal\e[0m'
 "
-exit
+chsh -s $(which zsh)
