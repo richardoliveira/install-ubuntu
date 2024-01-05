@@ -38,6 +38,7 @@ echo -e '\e[93mPasso 8: Instalando NVM...\e[0m'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 export NVM_DIR='$HOME/.nvm' && [ -s '$NVM_DIR/nvm.sh' ] && . '$NVM_DIR/nvm.sh' && [ -s '$NVM_DIR/bash_completion' ] && . '$NVM_DIR/bash_completion'
 nvm install --lts
+source ~/.zshrc
 
 # Instalação do PNPM e configurações
 echo -e '\e[93mPasso 9: Instalando PNPM e configurando...\e[0m'
@@ -84,4 +85,4 @@ fi
 
 echo -e '\e[93mScript concluído! Feche e abra o seu terminal\e[0m'
 "
-exec zsh
+exit
