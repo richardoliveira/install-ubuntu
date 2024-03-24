@@ -54,15 +54,15 @@ echo -e '\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m'
 pnpm install -g turbo @nestjs/cli typescript
 
 # Configuração do Docker
-echo -e '\e[93mPasso 11: Configurando Docker...\e[0m'
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable' | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo usermod -aG docker \$USER
-echo -e '[boot]\ncommand = service docker start' | sudo tee /etc/wsl.conf > /dev/null
+# echo -e '\e[93mPasso 11: Configurando Docker...\e[0m'
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+# echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable' | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# sudo apt-get update && sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y && sudo usermod -aG docker \$USER
+# echo -e '[boot]\ncommand = service docker start' | sudo tee /etc/wsl.conf > /dev/null
 
 # Criação do diretório 'sources'
-echo -e '\e[93mPasso 12: Criando diretório \"sources\"...\e[0m'
-mkdir sources
+# echo -e '\e[93mPasso 12: Criando diretório \"sources\"...\e[0m'
+# mkdir sources
 
 if [ -z \"\$1\" ]; then
     parametro='false'
