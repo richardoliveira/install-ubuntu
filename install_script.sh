@@ -53,6 +53,16 @@ source ~/.zshrc
 echo -e '\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m'
 pnpm install -g turbo @nestjs/cli typescript
 
+# Configuração do .NET 8
+sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
+sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-8.0
+sudo apt-get install -y dotnet-runtime-8.0
+
+# Configuração do .NET 7
+sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
+sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-7.0
+sudo apt-get install -y dotnet-runtime-7.0
+
 # Configuração do Docker
 # echo -e '\e[93mPasso 11: Configurando Docker...\e[0m'
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
