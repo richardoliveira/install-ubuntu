@@ -51,6 +51,12 @@ source ~/.zshrc
 echo -e '\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m'
 pnpm install -g turbo @nestjs/cli typescript
 
+# Configuração do .NET 9
+sudo add-apt-repository ppa:dotnet/backports -y
+sudo apt-get update && sudo apt-get install -y dotnet-sdk-9.0
+sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-9.0
+sudo apt-get install -y dotnet-runtime-9.0
+
 # Configuração do .NET 8
 sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
 sudo apt-get update && sudo apt-get install -y aspnetcore-runtime-8.0
