@@ -38,18 +38,18 @@ curl -L https://raw.githubusercontent.com/richardoliveira/zshrc/master/.zshrc -o
 
 # Instalação do NVM
 echo -e '\e[93mPasso 8: Instalando NVM...\e[0m'
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/refs/heads/master/install.sh | bash
 source ~/.zshrc
 nvm install --lts
 
-# Instalação do PNPM e configurações
-echo -e '\e[93mPasso 9: Instalando PNPM e configurando...\e[0m'
-npm install -g pnpm@latest
-source ~/.zshrc
+# Instalação do HOMEBREW e configurações
+echo -e '\e[93mPasso 9: Instalando HOMEBREW e configurando...\e[0m'
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt-get install build-essential
 
 # Instalação do NestJS e TypeScript
 echo -e '\e[93mPasso 10: Instalando NestJS e TypeScript...\e[0m'
-pnpm install -g turbo @nestjs/cli typescript
+npm install -g turbo @nestjs/cli typescript
 
 # Configuração do .NET 9
 sudo add-apt-repository ppa:dotnet/backports -y
