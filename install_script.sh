@@ -44,7 +44,7 @@ nvm install --lts
 
 # Instalação do HOMEBREW e configurações
 echo -e '\e[93mPasso 9: Instalando HOMEBREW e configurando...\e[0m'
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)'
 sudo apt-get install build-essential
 
 # Instalação do NestJS e TypeScript
